@@ -40,8 +40,6 @@ std::vector<Universe::universe<T>> generate_multiverse(std::vector<T>& vec){
     std::sort(vec.begin(), vec.end(), [](T a, T b){ return a < b;});
     do {
         multiverse.emplace_back(vec);
-        //Universe::universe temp(vec);
-        //multiverse.push_back(temp);
     } while (std::next_permutation(vec.begin(), vec.end()));
     return move(multiverse);
 
